@@ -1,21 +1,23 @@
 import React from 'react';
 import './App.css';
+import VenueFormComponent from './components/VenueFormComponent.js'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <VenueFormComponent />
+      <h2>Seats Available</h2>
+      <form>
+        <label for="name">Pick Your Seat</label><br/>
+        <input type="text" id="label" name="label"/><br/>
+        <input type="submit" value="submit"/>
+      </form>
+      <h2>Best Seat</h2>
+      <form>
+        <label for="name">How many seats are you looking for?</label><br/>
+        <input type="text" id="seats_requested" name="seats_requested"/><br/>
+        <input type="submit" value="submit"/>
+      </form>
     </div>
   );
 }
