@@ -32,6 +32,7 @@ export default class VenueFormComponent extends React.Component {
 
       axios.post(`http://localhost:3001/api/venues`, {venue})
         .then(res => {
+          this.props.handleCreation(res.data.venue_id);
           this.setState({loading: false})
           console.log(res);
           console.log(res.data);
