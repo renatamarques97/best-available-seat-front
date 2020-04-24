@@ -80,7 +80,7 @@ export default class SeatFormComponent extends React.Component {
   render() {
     const seats = this.props.seats.filter((seat) => !this.state.taken.includes(seat.label))
     return (
-      <div>
+      <div class="box-container">
         <h2>Seats Available</h2>
         <form onSubmit={this.handleSubmit}>
           <br/>
@@ -94,7 +94,7 @@ export default class SeatFormComponent extends React.Component {
               })
             }
           </select>
-          <button type="submit">Submit</button>
+          <button class="btn-success" type="submit">Submit</button>
         </form>
         <ul>
           {
@@ -102,7 +102,12 @@ export default class SeatFormComponent extends React.Component {
               return (
                 <React.Fragment key={index}>
                   <li>{label}</li>
-                  <button value={label} onClick={this.deleteSeat}>x</button>
+                  <button
+                    class="btn-danger"
+                    value={label}
+                    onClick={this.deleteSeat}>
+                    x
+                  </button>
                 </React.Fragment>
               )
             })

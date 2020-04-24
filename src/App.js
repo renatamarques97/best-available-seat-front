@@ -40,13 +40,14 @@ class App extends React.Component {
   render() {
   return (
     <div>
-      <VenueFormComponent handleCreation={this.handleVenueCreation} />
-      <VenueListComponent
-        handleChange={this.fetchVenues}
-        handleVenueCreation={this.handleVenueCreation}
-        venues={this.state.venues}
-        venueId={this.state.venueId}
-      />
+      <VenueFormComponent handleCreation={this.handleVenueCreation}>
+        <VenueListComponent
+          handleChange={this.fetchVenues}
+          handleVenueCreation={this.handleVenueCreation}
+          venues={this.state.venues}
+          venueId={this.state.venueId}
+        />
+      </VenueFormComponent>
       <BestSeatComponent venueId={this.state.venueId}/>
       <SeatFormComponent seats={this.state.seats}/>
     </div>

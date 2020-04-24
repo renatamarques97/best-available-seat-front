@@ -42,7 +42,7 @@ export default class VenueFormComponent extends React.Component {
 
   render() {
     return (
-      <div>
+      <div class="box-container">
         <h2>Create a new Venue</h2>
         <form onSubmit={this.handleSubmit}>
           <label>
@@ -76,8 +76,9 @@ export default class VenueFormComponent extends React.Component {
               onChange={this.handleChange}
             /><br/>
           </label>
-          <button type="submit">Create</button>
+          <button type="submit" class="btn-success">Create</button>
         </form>
+        {this.props.children}
       </div>
     )
   }

@@ -15,7 +15,7 @@ const BestSeatComponent = (props) => {
   }
 
   return (
-    <div>
+    <div class="box-container">
       <h2>Best Seat</h2>
       <form onSubmit={(event) => { event.preventDefault(); fetchBestSeats(); }}>
         <label>
@@ -27,7 +27,7 @@ const BestSeatComponent = (props) => {
             onChange={(event) => setSeatsRequest(event.target.value)}
           /><br/>
         </label><br/>
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn-success">Submit</button>
       </form>
       <p>The Best Available Seat for this Venue: {bestSeats.join(",")} </p>
     </div>
