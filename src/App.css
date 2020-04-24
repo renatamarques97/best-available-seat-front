@@ -18,6 +18,7 @@ button {
   outline: none;
   transition: all 0.25s, transform 0.1s;
   display: table;
+  font-size: 17px;
   cursor: pointer;
 }
 button:hover {
