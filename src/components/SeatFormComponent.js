@@ -102,7 +102,7 @@ export default class SeatFormComponent extends React.Component {
               return (
                 <React.Fragment key={index}>
                   <li>{label}</li>
-                  <button value={label} onClick={this.deleteSeat} >x</button>
+                  <button value={label} onClick={this.deleteSeat}>x</button>
                 </React.Fragment>
               )
             })
