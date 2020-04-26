@@ -14,6 +14,11 @@ from left to right.
 yarn install
 ```
 
+### Run test suite
+```shell
+yarn test
+```
+
 ### Run the server
 ```shell
 yarn start
